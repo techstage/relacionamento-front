@@ -1,16 +1,21 @@
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { RelacionamentoListagemComponent } from './relacionamento-listagem/relacionamento-listagem.component';
+import { RelacionamentoService } from './relacionamento.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RelacionamentoListagemComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ RelacionamentoService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
